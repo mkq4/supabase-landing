@@ -27,8 +27,8 @@
                     </ul>
                 </div>
                 <div class="header-right">
-                    <a href="#" class="btn-green btn-small">Start your project</a>
-                    <a href="#" class="sign-in">Sign in</a>
+                    <a href="https://supabase.com/dashboard/new" class="btn-green btn-small" target="_blank" rel="noopener noreferrer">Start your project</a>
+                    <button type="button" class="sign-in" id="open-sign-in">Sign in</button>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                     <h1 class="hero-title">Store and serve <br> any type of digital content</h1>
                     <p class="hero-text">An open source Object store service with unlimited scalability, for any file type.</p>
                     <p class="hero-text">With custom policies and permissions that are familiar and easy to implement.</p>
-                    <a href="#" class="btn-green">Start a project</a>
+                    <a href="https://supabase.com/dashboard/new" class="btn-green" target="_blank" rel="noopener noreferrer">Start a project</a>
                 </div>
                 <div class="hero-right">
                     <img src="images/hero.png" alt="hero" class="hero-img">
@@ -129,7 +129,7 @@
                                 nextjs-ts-user-management
                                 <img src="images/github-small.svg" alt="">
                             </div>
-                            <a href="#" class="btn-deploy">&#9650; <span>Deploy</span></a>
+                            <a href="https://supabase.com/dashboard/new" class="btn-deploy" target="_blank" rel="noopener noreferrer">&#9650; <span>Deploy</span></a>
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                         <a href="#" class="tab">Delete files</a>
                     </div>
                     <div class="code">
-                        <a href="#" class="copy"><img src="images/copy.svg" alt=""> Copy</a>
+                        <button type="button" class="copy"><img src="images/copy.svg" alt=""><span>Copy</span></button>
                         <div class="code-row"><span class="num">1</span><span class="line"></span></div>
                         <div class="code-row"><span class="num">2</span><span class="line"><span class="comment">// Upload an image to the "avatars" bucket</span></span></div>
                         <div class="code-row"><span class="num">3</span><span class="line"><span class="blue">const</span> spaceCat = event.target.files[0]</span></div>
@@ -200,7 +200,7 @@
                     <h2 class="middle-title">Integrates natively <br> with Supabase Auth</h2>
                     <p class="auth-text">Using Postgres Row Level Security to create Object access rules.</p>
                     <p class="auth-text2">Storage Authorization is built around Postgres so that you can use any combination of SQL, Postgres functions, and even your own metadata to write policies.</p>
-                    <a href="#" class="btn-gray"><img src="images/arrow.svg" alt=""> Expore documentation</a>
+                    <a href="https://supabase.com/docs/guides/storage" class="btn-gray" target="_blank" rel="noopener noreferrer"><img src="images/arrow.svg" alt=""> Explore documentation</a>
                 </div>
 
                 <div class="auth-right">
@@ -210,7 +210,7 @@
                         <a href="#" class="tab">Authenticated access to a bucket</a>
                     </div>
                     <div class="code code-auth">
-                        <a href="#" class="copy"><img src="images/copy.svg" alt=""> Copy</a>
+                        <button type="button" class="copy"><img src="images/copy.svg" alt=""><span>Copy</span></button>
                         <div class="code-row"><span class="num">1</span><span class="line"><span class="blue">create policy</span> <span class="green">"Public Access"</span></span></div>
                         <div class="code-row"><span class="num">2</span><span class="line"><span class="blue">on</span> storage.objects <span class="blue">for all</span></span></div>
                         <div class="code-row"><span class="num">3</span><span class="line"><span class="blue">using</span>( bucket_id = <span class="green">'avatars'</span>);</span></div>
@@ -228,7 +228,7 @@
     <!-- призыв -->
     <div class="cta">
         <h2 class="cta-title"><span class="gray">Build in a weekend,</span> scale to millions</h2>
-        <a href="#" class="btn-green">Start your project</a>
+        <a href="https://supabase.com/dashboard/new" class="btn-green" target="_blank" rel="noopener noreferrer">Start your project</a>
     </div>
 
     <!-- подвал -->
@@ -285,5 +285,21 @@
         </div>
     </div>
 
+    <!-- Простая модалка входа без настоящей авторизации -->
+    <div class="modal-overlay" id="sign-in-modal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button type="button" class="modal-close" id="close-sign-in" aria-label="Close">&times;</button>
+            <h2 id="modal-title">Sign in</h2>
+            <form id="sign-in-form">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" autocomplete="current-password" required>
+                <button type="submit" class="btn-green modal-submit">Sign in</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
